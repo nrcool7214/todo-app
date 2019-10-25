@@ -11,3 +11,16 @@ This boilerplate consists of:
 
 We will pass the name of our app as an arguments running `npm create-react-app todo-app`.  
 We have also created a .gitignore file.
+
+## Stage 1: Hello world
+
+In this stage we have set up our initial structure for our react app.
+
+    - We printed hello world in our main file.
+    - We deleted files we don't need.
+    - We installed node-sass using npm and we connected it to our app.
+
+**Links**
+
+- [ `create-react-app` official documentation ](https://create-react-app.dev/)
+- [Sass with `create-react-app`](https://create-react-app.dev/docs/adding-a-sass-stylesheet/)
