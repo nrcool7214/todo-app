@@ -9,4 +9,5 @@ This boilerplate consists of:
 
 - Files created by [`npx create-react-app`](https://github.com/facebook/create-react-app).
 
-We will pass the name of our app as an arguments running `npm create-react-app todo-app`
+We will pass the name of our app as an arguments running `npm create-react-app todo-app`.  
+We have also created a .gitignore file.
