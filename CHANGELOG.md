@@ -2,15 +2,21 @@
 
 This changelog is ordered in reverse chronological order, meaning that the last changes made will always be on top of the file, so that readers will not have to scroll all the way down with each change.
 
-## Stage 0: Boilerplate
+## Stage 2: Components
 
-This branch contains a boilerplate for almost every react app you are going to create.  
-This boilerplate consists of:
+In this stage we set up our basic structure.
 
-- Files created by [`npx create-react-app`](https://github.com/facebook/create-react-app).
+    - We restructed our folder structure and create seperate folders for our different kind of files.
+    - We designed our app structure and created the necessary components.
+    - We rendered a list of todo and todones items using an array of data.
+    - We conditionally returned our lists based on the length of our data.
 
-We will pass the name of our app as an arguments running `npm create-react-app todo-app`.  
-We have also created a .gitignore file.
+**Links**
+
+- [Components API](https://reactjs.org/docs/react-component.html)
+- [Rendering elements](https://reactjs.org/docs/rendering-elements.html)
+- [Conditional rendering](https://reactjs.org/docs/conditional-rendering.html)
+- [Lists and keys](https://reactjs.org/docs/lists-and-keys.html)
 
 ## Stage 1: Hello world
 
@@ -24,3 +30,13 @@ In this stage we have set up our initial structure for our react app.
 
 - [ `create-react-app` official documentation ](https://create-react-app.dev/)
 - [Sass with `create-react-app`](https://create-react-app.dev/docs/adding-a-sass-stylesheet/)
+
+## Stage 0: Boilerplate
+
+This branch contains a boilerplate for almost every react app you are going to create.  
+This boilerplate consists of:
+
+- Files created by [`npx create-react-app`](https://github.com/facebook/create-react-app).
+
+We will pass the name of our app as an arguments running `npm create-react-app todo-app`.  
+We have also created a .gitignore file.
