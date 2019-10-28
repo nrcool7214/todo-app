@@ -6,7 +6,7 @@ const ToDoneItem = props => {
     <div className="todones-item">
       <p>{data.text}</p>
       <div className="actions">
-        <button className="btn">&#10004;</button>
+        <button className="btn">&#8635;</button>
       </div>
     </div>
   );
