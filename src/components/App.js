@@ -36,7 +36,6 @@ class App extends React.Component {
   render() {
     const toDos = this.state.items.filter(el => !el.done);
     const toDones = this.state.items.filter(el => el.done);
-    console.log(this.state.items);
 
     return (
       <div className="app">
@@ -45,7 +44,10 @@ class App extends React.Component {
           items={toDos}
           handleChange={this.updateItem}
         ></ToDosContainer>
-        <ToDonesContainer items={toDones}></ToDonesContainer>
+        <ToDonesContainer
+          items={toDones}
+          handleChange={this.updateItem}
+        ></ToDonesContainer>
       </div>
     );
   }
