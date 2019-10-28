@@ -14,6 +14,10 @@ In this stage we try to play around with props and state
     - So now `App.js` sends an array of todo-items to `ToDosContainer` via props. And
      `ToDosContainer` sends each item to the the `ToDoItem` component again via props.
 
+**Links**
+
+- [Components and Props](https://reactjs.org/docs/components-and-props.html)
+
 ## Stage 2: Components
 
 In this stage we set up our basic structure.
