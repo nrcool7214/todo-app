@@ -33,6 +33,14 @@ class App extends React.Component {
     this.setState({ items });
   };
 
+  addItem = value => {
+    const newItem = { id: this.state.items.length, text: value, done: false };
+    this.setState({
+      items: [...this.state.items, newItem]
+    });
+    console.log(this.state.items);
+  };
+
   render() {
     const toDos = this.state.items.filter(el => !el.done);
     const toDones = this.state.items.filter(el => el.done);
@@ -43,6 +51,7 @@ class App extends React.Component {
         <ToDosContainer
           items={toDos}
           handleChange={this.updateItem}
+          handleAddTodo={this.addItem}
         ></ToDosContainer>
         <ToDonesContainer
           items={toDones}

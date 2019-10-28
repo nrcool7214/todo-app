@@ -9,7 +9,7 @@ class ToDonesContainer extends React.Component {
       return (
         <ToDoneItem
           item={el}
-          key={el.text}
+          key={el.id}
           onStatusChange={this.props.handleChange}
         ></ToDoneItem>
       );
