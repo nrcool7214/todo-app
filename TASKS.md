@@ -2,6 +2,29 @@
 
 This file lists the changes that need to be made in each stage. It is ordered in reverse chronological order, meaning that the last changes made will always be on top of the file, so that readers will not have to scroll all the way down with each task added.
 
+## Task 04 - Events and Forms
+
+React provides an easy way to manage events. Prepare to say goodbye to addEventListener.
+Handling events with React elements is very similar to handling events on DOM elements. There are some syntactic differences:
+
+- React events are named using camelCase, rather than lowercase.
+- With JSX you pass a function as the event handler, rather than a string.
+
+Forms require as well some special treatment. HTML form elements work a little bit differently from other DOM elements in React, because form elements naturally keep some internal state.
+
+What we will see in this stage is
+
+- how to handle events.
+- how to send data from a child to parent.
+- how to get input from a form.
+- how to update our state and re-render our component.
+
+**TODO**
+
+1. Add event listeners so we can toggle the status of each item.
+2. After making sure that the events work as they should, we need to get whatever change happened and update the data in our App.js and rerender the whole app. So we need that change to travel all the way up to the parent component.
+3. Set up the form so it can add a new todo item.
+
 ## Task 03 - Props and State.
 
 We have splitted our app into different components and now it's time to see how the data flow through components.
