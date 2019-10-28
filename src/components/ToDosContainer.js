@@ -3,7 +3,7 @@ import ToDoItem from './ToDoItem';
 
 class ToDosContainer extends React.Component {
   checkItem = item => {
-    console.log(item);
+    this.props.handleChange(item);
   };
 
   render() {
