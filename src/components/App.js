@@ -14,29 +14,47 @@ class App extends React.Component {
   }
 
   async componentDidMount() {
-    const res = await axios.get(`http://localhost:3001/todos`);
-    const items = res.data;
-    this.setState({ items });
+    try {
+      const res = await axios.get(`http://localhost:3001/todos`);
+      const items = res.data;
+      this.setState({ items });
+    } catch (err) {
+      console.log(err);
+    }
   }
 
-  updateItem = id => {
-    // We need to toggle the status of the item with `id`.
-    const items = this.state.items.map(item => {
-      if (item.id === id) {
-        item.done = !item.done;
-        return item;
-      } else return item;
-    });
+  updateItem = async id => {
+    //find the item
+    try {
+      const item = this.state.items.filter(el => el.id === id)[0];
+      const res = await axios.put(`http://localhost:3001/todos/${id}`, {
+        change: { done: !item.done }
+      });
 
-    this.setState({ items });
+      // We need to toggle the status of the item with `id`.
+      const items = this.state.items.map(item => {
+        if (item.id === id) {
+          item.done = !item.done;
+          return item;
+        } else return item;
+      });
+
+      this.setState({ items });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
-  addItem = value => {
-    const newItem = { id: this.state.items.length, text: value, done: false };
-    this.setState({
-      items: [...this.state.items, newItem]
-    });
-    console.log(this.state.items);
+  addItem = async value => {
+    try {
+      const newItem = { id: new Date(), text: value, done: false };
+      const res = await axios.post('http://localhost:3001/todos', newItem);
+      this.setState({
+        items: [...this.state.items, newItem]
+      });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   render() {
