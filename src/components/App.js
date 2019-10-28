@@ -3,24 +3,22 @@ import '../css/App.scss';
 import Navigation from './Navigation';
 import ToDosContainer from './ToDosContainer';
 import ToDonesContainer from './ToDonesContainer';
+import axios from 'axios';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: [
-        { id: 0, text: 'Wash my face!', done: false },
-        { id: 1, text: 'Walk the dog', done: false },
-        { id: 2, text: 'Pay the rent', done: false },
-        { id: 3, text: 'Make so moneys', done: false },
-        { id: 4, text: 'Make a website', done: true },
-        { id: 5, text: 'Call my mom', done: true },
-        { id: 6, text: 'Finish reading my book', done: true },
-        { id: 7, text: 'Make more moneys', done: true }
-      ]
+      items: []
     };
   }
 
+  componentDidMount() {
+    axios.get(`http://localhost:3001/todos`).then(res => {
+      const items = res.data;
+      this.setState({ items });
+    });
+  }
   updateItem = id => {
     // We need to toggle the status of the item with `id`.
     const items = this.state.items.map(item => {
