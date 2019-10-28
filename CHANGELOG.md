@@ -2,6 +2,23 @@
 
 This changelog is ordered in reverse chronological order, meaning that the last changes made will always be on top of the file, so that readers will not have to scroll all the way down with each change.
 
+## Stage 4: Events and forms
+
+In this stage we add all the functionalities we needed
+
+    - First we added a simple on click event in our todo item component.
+    - After we made sure it worked, we drilled the event all the way up to the the grandparent.
+      Using props the click event that happened in the `ToDoItem` went all the way up to `App`
+      component, through `ToDoContainer.
+    - Afterwards we did the same exactly for the todones items.
+    - Finally we set up our form to add a new item.
+
+**Links**
+
+- [Handling Events](https://reactjs.org/docs/handling-events.html)
+- [Forms](https://reactjs.org/docs/forms.html)
+- [Components data communication](https://medium.com/@ruthmpardee/passing-data-between-react-components-103ad82ebd17)
+
 ## Stage 3: Props and State
 
 In this stage we try to play around with props and state
