@@ -54,7 +54,7 @@ app.post('/todos', function(req, res) {
     let newTodo = {
       id: new Date(),
       text: req.body.text,
-      done: null
+      done: false
     };
 
     todos.push(newTodo);
