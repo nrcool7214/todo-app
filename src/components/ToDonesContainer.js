@@ -1,5 +1,7 @@
 import React from 'react';
 import ToDoneItem from './ToDoneItem';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 class ToDonesContainer extends React.Component {
   render() {
@@ -17,7 +19,10 @@ class ToDonesContainer extends React.Component {
 
     return (
       <div className="todones-container">
-        <h3>BACKLOG</h3>
+        <div className="title">
+          <h3>BACKLOG</h3>
+          {todones.length == 0 && <FontAwesomeIcon icon={faSpinner} spin />}
+        </div>{' '}
         {todones.length > 0 && toDoNesItems}
       </div>
     );

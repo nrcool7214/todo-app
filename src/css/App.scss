@@ -65,7 +65,6 @@ $btnBg: #184b43;
         align-items: center;
         justify-content: space-between;
       }
-
       .todo-item {
         padding: 5px 10px;
         background: $inputBg;
@@ -81,6 +80,11 @@ $btnBg: #184b43;
     padding: 10px;
     width: 400px;
     min-height: 400px;
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
     .todones-item {
       padding: 5px 10px;
       background: $inputBg;
