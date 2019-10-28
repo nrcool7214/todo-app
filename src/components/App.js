@@ -13,12 +13,12 @@ class App extends React.Component {
     };
   }
 
-  componentDidMount() {
-    axios.get(`http://localhost:3001/todos`).then(res => {
-      const items = res.data;
-      this.setState({ items });
-    });
+  async componentDidMount() {
+    const res = await axios.get(`http://localhost:3001/todos`);
+    const items = res.data;
+    this.setState({ items });
   }
+
   updateItem = id => {
     // We need to toggle the status of the item with `id`.
     const items = this.state.items.map(item => {
