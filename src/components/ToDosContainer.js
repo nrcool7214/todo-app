@@ -17,6 +17,9 @@ class ToDosContainer extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     this.props.handleAddTodo(this.state.value);
+    this.setState({
+      value: ''
+    });
   }
 
   render() {
