@@ -2,6 +2,21 @@
 
 This file lists the changes that need to be made in each stage. It is ordered in reverse chronological order, meaning that the last changes made will always be on top of the file, so that readers will not have to scroll all the way down with each task added.
 
+## Task 05 - Lifecycle Methods
+
+You can think of React lifecycle methods as the series of events that happen from the birth of a React component to its death. Every component in React goes through a lifecycle of events. I like to think of them as going through a cycle of birth, growth, and death.
+
+- Mounting – Birth of your component
+- Update – Growth of your component
+- Unmount – Death of your component
+
+Now that we understand the series of lifecycle events let’s learn more about how they work.
+
+**TODOS**
+Instead of having predefined data in our app we will create a small server that stores our todos. That way we will be able to use the right lifecycle methods to retrieve the data when we mount our components. The code for the server is available in the branch `stage/05-lifecycle`. All you need to do is enter the server directory and run `node server.js`.
+
+1. Connect your app with your api so it can retrieve all todos and create new ones.
+
 ## Task 04 - Events and Forms
 
 React provides an easy way to manage events. Prepare to say goodbye to addEventListener.
