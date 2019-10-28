@@ -10,7 +10,7 @@ class ToDoItem extends React.Component {
         <div className="actions">
           <button
             className="btn"
-            onClick={() => this.props.onStatusChange(item)}
+            onClick={() => this.props.onStatusChange(item.id)}
           >
             &#10004;
           </button>

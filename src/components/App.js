@@ -21,20 +21,29 @@ class App extends React.Component {
     };
   }
 
-  checkItem = item => {
-    console.log(item);
+  updateItem = id => {
+    // We need to toggle the status of the item with `id`.
+    const items = this.state.items.map(item => {
+      if (item.id === id) {
+        item.done = !item.done;
+        return item;
+      } else return item;
+    });
+
+    this.setState({ items });
   };
 
   render() {
-    const toDos = this.state.items.filter(el => el.done);
-    const toDones = this.state.items.filter(el => !el.done);
+    const toDos = this.state.items.filter(el => !el.done);
+    const toDones = this.state.items.filter(el => el.done);
+    console.log(this.state.items);
 
     return (
       <div className="app">
         <Navigation></Navigation>
         <ToDosContainer
           items={toDos}
-          handleChange={this.checkItem}
+          handleChange={this.updateItem}
         ></ToDosContainer>
         <ToDonesContainer items={toDones}></ToDonesContainer>
       </div>

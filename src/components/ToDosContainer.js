@@ -2,10 +2,6 @@ import React from 'react';
 import ToDoItem from './ToDoItem';
 
 class ToDosContainer extends React.Component {
-  checkItem = item => {
-    this.props.handleChange(item);
-  };
-
   render() {
     const todos = this.props.items;
 
@@ -14,7 +10,7 @@ class ToDosContainer extends React.Component {
         <ToDoItem
           item={el}
           key={el.text}
-          onStatusChange={this.checkItem}
+          onStatusChange={this.props.handleChange}
         ></ToDoItem>
       );
     });
