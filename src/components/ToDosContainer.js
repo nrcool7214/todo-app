@@ -1,5 +1,7 @@
 import React from 'react';
 import ToDoItem from './ToDoItem';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 class ToDosContainer extends React.Component {
   constructor(props) {
@@ -24,7 +26,6 @@ class ToDosContainer extends React.Component {
 
   render() {
     const todos = this.props.items;
-
     const toDoItems = todos.map(el => {
       return (
         <ToDoItem
@@ -49,7 +50,10 @@ class ToDosContainer extends React.Component {
           <input className="btn" type="submit" value="ADD" />
         </form>
         <div className="todos">
-          <h3>TO DO</h3>
+          <div className="title">
+            <h3>TO DO</h3>
+            {todos.length == 0 && <FontAwesomeIcon icon={faSpinner} spin />}
+          </div>
           {todos.length > 0 && toDoItems}
         </div>
       </div>

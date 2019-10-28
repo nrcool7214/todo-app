@@ -42,6 +42,8 @@ $btnBg: #184b43;
   }
   .todos-container {
     padding: 20px 10px;
+    width: 400px;
+    min-height: 400px;
     .todo-form {
       .input-item {
         input {
@@ -58,12 +60,17 @@ $btnBg: #184b43;
     }
     .todos {
       padding-top: 30px;
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
       .todo-item {
         padding: 5px 10px;
         background: $inputBg;
         margin: 10px 0;
         border-radius: 50px;
-        width: 300px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -72,12 +79,13 @@ $btnBg: #184b43;
   }
   .todones-container {
     padding: 10px;
+    width: 400px;
+    min-height: 400px;
     .todones-item {
       padding: 5px 10px;
       background: $inputBg;
       margin: 10px 0;
       border-radius: 50px;
-      width: 300px;
       display: flex;
       align-items: center;
       justify-content: space-between;
