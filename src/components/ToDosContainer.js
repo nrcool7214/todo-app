@@ -1,13 +1,8 @@
 import React from 'react';
 import ToDoItem from './ToDoItem';
 
-const ToDosContainer = () => {
-  const todos = [
-    { text: 'Wash my face!', done: false },
-    { text: 'Walk the dog', done: false },
-    { text: 'Pay the rent', done: false },
-    { text: 'Make so moneys', done: false }
-  ];
+const ToDosContainer = props => {
+  const todos = props.items;
 
   const toDoItems = todos.map(el => {
     return <ToDoItem item={el} key={el.text}></ToDoItem>;

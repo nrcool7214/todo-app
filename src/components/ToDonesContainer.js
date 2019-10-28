@@ -1,13 +1,8 @@
 import React from 'react';
 import ToDoneItem from './ToDoneItem';
 
-const ToDonesContainer = () => {
-  const todones = [
-    { text: 'Make a website', done: true },
-    { text: 'Call my mom', done: true },
-    { text: 'Finish reading my book', done: true },
-    { text: 'Make more moneys', done: true }
-  ];
+const ToDonesContainer = props => {
+  const todones = props.items;
 
   const toDoNesItems = todones.map(el => {
     return <ToDoneItem item={el} key={el.text}></ToDoneItem>;
