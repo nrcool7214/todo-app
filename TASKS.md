@@ -2,6 +2,20 @@
 
 This file lists the changes that need to be made in each stage. It is ordered in reverse chronological order, meaning that the last changes made will always be on top of the file, so that readers will not have to scroll all the way down with each task added.
 
+## Task 03 - Props and State.
+
+We have splitted our app into different components and now it's time to see how the data flow through components.
+
+Short for properties, props can best be defined as a way of passing data from component to component, basically from parent to child component.
+
+State on the other hand, stores data about the component that can change over time. Change could come in the form of user events or system events such as response to user input or server requests. Working with a state’s component normally involves setting a component’s default state, accessing the current state and updating the state.
+
+**TODO**
+
+1. Please create a separate component for each todo and todone item.
+2. Please use props pass the data of each item from the parent component to the child.
+3. Use state to define the initial state of your app component.
+
 ## Task 02 - Components
 
 Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. This page provides an introduction to the idea of components. You can find a detailed component API reference [here](https://reactjs.org/docs/react-component.html). Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
