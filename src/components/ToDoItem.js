@@ -1,15 +1,24 @@
 import React from 'react';
 
-const ToDoItem = props => {
-  const data = props.item;
-  return (
-    <div className="todo-item">
-      <p>{data.text}</p>
-      <div className="actions">
-        <button className="btn">&#10004;</button>
+class ToDoItem extends React.Component {
+  checkItem = () => {
+    console.log(this.props.item);
+  };
+
+  render() {
+    const data = this.props.item;
+
+    return (
+      <div className="todo-item">
+        <p>{data.text}</p>
+        <div className="actions">
+          <button className="btn" onClick={this.checkItem}>
+            &#10004;
+          </button>
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default ToDoItem;
