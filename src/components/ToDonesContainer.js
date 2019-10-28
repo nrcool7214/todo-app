@@ -1,4 +1,5 @@
 import React from 'react';
+import ToDoneItem from './ToDoneItem';
 
 const ToDonesContainer = () => {
   const todones = [
@@ -9,14 +10,7 @@ const ToDonesContainer = () => {
   ];
 
   const toDoNesItems = todones.map(el => {
-    return (
-      <div className="todones-item" key={el.text}>
-        <p>{el.text}</p>
-        <div className="actions">
-          <button className="btn">&#8635;</button>
-        </div>
-      </div>
-    );
+    return <ToDoneItem item={el} key={el.text}></ToDoneItem>;
   });
 
   return (

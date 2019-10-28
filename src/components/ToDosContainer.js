@@ -1,4 +1,5 @@
 import React from 'react';
+import ToDoItem from './ToDoItem';
 
 const ToDosContainer = () => {
   const todos = [
@@ -9,14 +10,7 @@ const ToDosContainer = () => {
   ];
 
   const toDoItems = todos.map(el => {
-    return (
-      <div className="todo-item" key={el.text}>
-        <p>{el.text}</p>
-        <div className="actions">
-          <button className="btn">&#10004;</button>
-        </div>
-      </div>
-    );
+    return <ToDoItem item={el} key={el.text}></ToDoItem>;
   });
 
   return (
