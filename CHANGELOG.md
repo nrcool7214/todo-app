@@ -2,6 +2,20 @@
 
 This changelog is ordered in reverse chronological order, meaning that the last changes made will always be on top of the file, so that readers will not have to scroll all the way down with each change.
 
+## Stage 5: Lifecycle Methods
+
+In this stage we introduced a server where we store all our data, and using react's lifecycle methods we made our app dynamic
+
+    - We added the server directory, installed its dependencies and run it.
+    - Installed axios and got the initial data using ComponentDidMount.
+    - Updated our functions to store data in the server.
+    - Installed font awesome for react and created a loader for smoother UI.
+
+**Links**
+
+- [State and lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
+- [Lifecycle methods diagram](https://hackernoon.com/hn-images/1*sn-ftowp0_VVRbeUAFECMA.png)
+
 ## Stage 4: Events and forms
 
 In this stage we add all the functionalities we needed
