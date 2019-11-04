@@ -18,10 +18,12 @@ class ToDosContainer extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.props.handleAddTodo(this.state.value);
-    this.setState({
-      value: ''
-    });
+    if (this.state.value.length >= 3) {
+      this.props.handleAddTodo(this.state.value);
+      this.setState({
+        value: ''
+      });
+    }
   }
 
   render() {
@@ -49,12 +51,14 @@ class ToDosContainer extends React.Component {
           </label>
           <input className="btn" type="submit" value="ADD" />
         </form>
-        <div className="todos">
-          <div className="title">
-            <h3>TO DO</h3>
+        {todos.length > 0 && (
+          <div className="todos">
+            <div className="title">
+              <h3>TO DO</h3>
+            </div>
+            {toDoItems}
           </div>
-          {todos.length > 0 && toDoItems}
-        </div>
+        )}
       </div>
     );
   }

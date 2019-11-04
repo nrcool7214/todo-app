@@ -19,12 +19,14 @@ class ToDonesContainer extends React.Component {
 
     return (
       <div>
-        <div className="todones-container">
-          <div className="title">
-            <h3>BACKLOG</h3>
+        {todones.length > 0 && (
+          <div className="todones-container">
+            <div className="title">
+              <h3>BACKLOG</h3>
+            </div>
+            {toDoNesItems}
           </div>
-          {todones.length > 0 && toDoNesItems}
-        </div>
+        )}
       </div>
     );
   }
