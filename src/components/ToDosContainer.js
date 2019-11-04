@@ -18,7 +18,7 @@ class ToDosContainer extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    if (this.state.value.length >= 3) {
+    if (this.state.value.length >= 1) {
       this.props.handleAddTodo(this.state.value);
       this.setState({
         value: ''
